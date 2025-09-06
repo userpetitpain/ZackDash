@@ -87,11 +87,13 @@ git push -u origin my_branch # <- Branch (main or master for main branch)
 
 ## 📁 Folder Structure
 
-| Folder       | Description                          |
-|--------------|--------------------------------------|
-| `/templates` | Web pages                            |
-| `/static`    | Statics files (scripts, styles, ...) |
-| `/static/assets`| Images, audio, video, ...         |
+| Folder           | Description                          |
+|------------------|--------------------------------------|
+| `/templates`     | Web pages                            |
+| `/static`        | Statics files (scripts, styles, ...) |
+| `/static/assets` | Images, audio, video, ...            |
+| `/static/styles` | Css style files                      |
+| `/static/scripts`| JS scripts files                     |
 
 ## 🔒 License
 
