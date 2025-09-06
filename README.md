@@ -86,3 +86,7 @@ git push -u origin my_branch # <- Branch (main or master for main branch)
 | `/templates` | Web pages                            |
 | `/static`    | Statics files (scripts, styles, ...) |
 | `/static/assets`| Images, audio, video, ...         |
+
+## 🔒 License
+
+ZackDash is released under **The Unlicense**. You can **use**, **modify**, and **distribute** it **freely**.
