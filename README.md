@@ -1,3 +1,9 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white&style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white&style=flat-square)
+![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white&style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=black&style=flat-square)
+
+
 # ZackDash - Setup Guide
 
 This guide will help you step-by-step for setting up the ZackDash project including downloading the project files, running the project locally and pushing changes to the remote server
