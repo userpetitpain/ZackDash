@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/circular-graphics.css')}}">
+  <title>Main</title>
+</head>
+
+<body>
+  <h1>ZackDash</h1>
+  <div class="gauge">
+    <div class="gauge__ring" role="img" aria-label="Progression">
+      <div class="gauge__center">
+        <span id="gauge-value">42%</span>
+      </div>
+    </div>
+
+  <script src="{{ url_for('static', filename='scripts/circular_graphics.js')}}"></script>
+
+</body>
+
+</html>
