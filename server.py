@@ -42,14 +42,22 @@ def is_existing(user_name):
 
 def add_user(user_name, psswd):
     users[user_name] = bcrypt.hashpw(psswd.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
-    with open("website/users.json", "w") as f:
+    with open("users.json", "w") as f:
         json.dump(users, f, indent=4)
 
 #======== route ========
 
+@app.route('/')
+def home():
+    return render_template('verification.html')
+
 @app.route('/login')
 def default():
     return render_template('login.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
 
 #======== api route ========
 @app.route("/api/login", methods=["POST", "OPTIONS"])
