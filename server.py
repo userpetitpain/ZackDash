@@ -47,7 +47,7 @@ def add_user(user_name, psswd):
 
 #======== route ========
 
-@app.route('/')
+@app.route('/login')
 def default():
     return render_template('login.html')
 
