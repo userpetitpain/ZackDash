@@ -31,7 +31,7 @@ if (form) {
     } else if (result.message == "Missing data") {
       errorMessage.textContent = "Missing data";
       errorMessage.style.display = "block";
-    } else if (result.message == "Icorrect username or password") {
+    } else if (result.message == "Incorrect username or password") {
       errorMessage.textContent = "Incorrect username or password";
       errorMessage.style.display = "block";
       password.value = "";
