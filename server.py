@@ -51,6 +51,10 @@ def add_user(user_name, psswd):
 def home():
     return render_template('verification.html')
 
+@app.route('/main')
+def main():
+    return render_template('main.html')
+
 @app.route('/login')
 def default():
     return render_template('login.html')
