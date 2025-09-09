@@ -35,6 +35,16 @@ def check_login(username, password):
         return False, "Incorrect username or password"
     return True, "Success"
 
+def is_existing(user_name):
+    if not isinstance(users, dict):
+        return False
+    return user_name in users
+
+def add_user(user_name, psswd):
+    users[user_name] = bcrypt.hashpw(psswd.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+    with open("website/users.json", "w") as f:
+        json.dump(users, f, indent=4)
+
 #======== route ========
 
 @app.route('/')
@@ -69,5 +79,20 @@ def api_login():
     except Exception as e:
         print(f"Erreur dans api_login: {e}")
         return jsonify({"status": "error", "message": "Internal error"}), 500
+    
+@app.route('/api/signup', methods=["POST", "OPTIONS"])
+def api_signup():
+    if request.method == "OPTIONS":
+        return '', 200
+
+    data = request.get_json()
+    username = data.get("username")
+    password = data.get("password")
+        
+    if is_existing(username):
+        return jsonify({"status": "error", "message": "Utilisateur existe déjà"}), 409
+    else:
+        add_user(username, password)
+        return jsonify({"status": "success", "message": "Utilisateur créé"}), 201
 
 app.run(debug=True, port=config["port"], host="0.0.0.0")
