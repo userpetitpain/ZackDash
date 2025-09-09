@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/signup.css')}}">
+    <title>signup</title>
+</head>
+<body>
+    <h1>ZackDash</h1>
+    <h2>Signup</h2>
+    <form id="form">
+        <input type="text" name="username" id="username-input" placeholder="username">
+        <input type="password" name="password" id="password-input" placeholder="password">
+        <input type="password" name="confirm-password" id="confirm-password-input" placeholder="confirm password">
+        <input type="submit" name="submit" id="submit-button">
+    </form>
+    <p id="errorMessage"></p>
+
+    <script src="{{ url_for('static', filename='scripts/signup.js')}}"></script>
+</body>
+</html>
