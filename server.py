@@ -30,9 +30,9 @@ def check_login(username, password):
     if not username or not password:
         return False, "Missing username or password"
     if username not in users:
-        return False, "User not found"
+        return False, "Incorrect username or password"
     if not bcrypt.checkpw(password.encode('utf-8'), users[username].encode('utf-8')):
-        return False, "Incorrect password"
+        return False, "Incorrect username or password"
     return True, "Success"
 
 #======== route ========
@@ -61,10 +61,8 @@ def api_login():
             tokens[username] = token
             return jsonify({"status": "success", "token": token})
         else:
-            if msg == "Incorrect password":
+            if msg == "Incorrect password or username":
                 return jsonify({"status": "error", "message": msg}), 401
-            elif msg == "User not found":
-                return jsonify({"status": "error", "message": msg}), 404
             else:
                 return jsonify({"status": "error", "message": msg}), 400
 
