@@ -23,7 +23,7 @@ if (form) {
       const result = await response.json();
       console.log(result);
       if (result.status == "success") {
-        window.location.href = "/home";
+        window.location.href = "/login";
       } else {
         errorForm.textContent = "Erreur lors de la création du compte.";
       }
