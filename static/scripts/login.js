@@ -27,7 +27,7 @@ if (form) {
     if (result.status == "success") {
       localStorage.setItem("authToken", result.token);
       localStorage.setItem("isLoggedIn", "true");
-      window.location.href = "/doc";
+      window.location.href = "/main";
     } else if (result.message == "Missing data") {
       errorMessage.textContent = "Missing data";
       errorMessage.style.display = "block";
