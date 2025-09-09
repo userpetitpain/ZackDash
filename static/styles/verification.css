@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5em;
+  color: white;
+}
+
+#center-contener {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: #4e4e4e;
+}
