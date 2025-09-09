@@ -14,9 +14,7 @@ This guide will help you step-by-step for setting up the ZackDash project includ
 
 ### Download, install python and create a venv (linux only)
 
-For windows : Download and install [python](https://www.python.org/downloads/) 👈
-
-For macos : Download and install [python](https://www.python.org/downloads/) 👈
+For windows and macos: Download and install [python](https://www.python.org/downloads/) 👈
 
 For Linux : 
 ```
