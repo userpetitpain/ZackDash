@@ -1,6 +1,6 @@
 // Récup des éléments
-const ring = document.querySelector('.gauge__ring');
-const valueText = document.getElementById('gauge-value');
+const ring = document.querySelector(".gauge__ring");
+const valueText = document.getElementById("gauge-value");
 
 // Fonction qui met à jour le donut
 function updateGauge(pct) {
@@ -9,21 +9,25 @@ function updateGauge(pct) {
 
   // Seuils couleur: <50 vert, 50-79 jaune, >=80 rouge
   let color;
-  if (pct < 50) color = '#2ecc71';          // vert
-  else if (pct < 80) color = '#f1c40f';     // jaune
-  else color = '#e74c3c';                   // rouge
+  if (pct < 50) color = "#2ecc71"; // vert
+  else if (pct < 80) color = "#f1c40f"; // jaune
+  else color = "#e74c3c"; // rouge
 
   // Met à jour les variables CSS
-  ring.style.setProperty('--p', pct);
-  ring.style.setProperty('--c', color);
+  ring.style.setProperty("--p", pct);
+  ring.style.setProperty("--c", color);
 
   // Texte central
   valueText.textContent = `${pct}%`;
 
   // Accessibilité (aria-label)
-  ring.setAttribute('aria-label', `Progression ${pct}%`);
+  ring.setAttribute("aria-label", `Progression ${pct}%`);
+
+  if (pct > 80) {
+    ring.classList.add("red-flashing");
+  }
 }
 
-// Exemple d'utilisation : 
-let valeur = 67;   // ta variable à toi
+// Exemple d'utilisation :
+let valeur = 67; // ta variable à toi
 updateGauge(valeur);
