@@ -12,6 +12,22 @@
   animation: l3 1.5s infinite linear;
 }
 
+.red-flashing {
+  animation: red-flash 3s infinite;
+}
+
+@keyframes red-flash {
+  0% {
+    box-shadow: 0 0 3px red;
+  }
+  50% {
+    box-shadow: 0 0 15px red;
+  }
+  100% {
+    box-shadow: 0 0 3px red;
+  }
+}
+
 @keyframes l3 {
   to {
     transform: rotate(1turn);
